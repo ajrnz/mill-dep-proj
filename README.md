@@ -8,6 +8,4 @@ The main build file is located inside the `main` folder as one of the tests we a
 # Run the tests
 
     cd main
-    mill dep-proj.run
-
- 
+    mill proj.run
