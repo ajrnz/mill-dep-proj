@@ -1,8 +1,8 @@
-import $ivy.`com.lihaoyi::mill-contrib-bloop:0.9.6test`
+import $ivy.`com.lihaoyi::mill-contrib-bloop:$MILL_VERSION`
 
 import mill._, scalalib._
 
-import $file.^.SoftwareVersions, SoftwareVersions.Versions._
+import $file.^.^.`software-versions`, `software-versions`.Versions._
 
 object `sub-proj` extends ScalaModule {
   def scalaVersion = commonScalaVersion

@@ -1,15 +1,16 @@
-import $ivy.`com.lihaoyi::mill-contrib-bloop:0.9.6test`
+
 
 import mill.scalalib._
-import $file.SoftwareVersions, SoftwareVersions.Versions._
-import $file.^.`external-lib`.{build => externalLibBuild},
-externalLibBuild.`external-lib`
+import $file.^.`software-versions`, `software-versions`.Versions._
+import $file.^.`external-lib`.{build => externalLibBuild}, externalLibBuild.`external-lib`
+import $file.^.`external-multi`.{build => externalMiltiBuild}, externalMiltiBuild.`external-multi`
+
 import $file.`sub-proj`.{build => subProjBuild}, subProjBuild.`sub-proj`
 
 object proj extends ScalaModule {
   def scalaVersion = commonScalaVersion
-//  def mainClass = Some("test.MainRun")
-  def moduleDeps = Seq(proj1, proj2, `sub-proj`, `external-lib`)
+  def mainClass = Some("proj.Proj")
+  def moduleDeps = Seq(proj1, proj2, `sub-proj`, `external-lib`, `external-multi`.jvm)
 
   def ivyDeps = Agg(upickleDep)
 

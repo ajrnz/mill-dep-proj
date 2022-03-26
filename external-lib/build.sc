@@ -2,7 +2,7 @@ import $ivy.`com.lihaoyi::mill-contrib-bloop:0.9.6test`
 
 import mill._, scalalib._
 
-import $file.^.main.SoftwareVersions, SoftwareVersions.Versions._
+import $file.^.`software-versions`, `software-versions`.Versions._
 
 
 object `external-lib` extends ScalaModule {

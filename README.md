@@ -4,3 +4,10 @@
 
 
 The main build file is located inside the `main` folder as one of the tests we are doing is to check that the projects in another part of the filesystem can be incorporated (foreign modules).
+
+# Run the tests
+
+    cd main
+    mill dep-proj.run
+
+ 

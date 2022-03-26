@@ -1,7 +1,7 @@
 import mill._, scalalib._
 
 object Versions extends ScalaModule {
-  def commonScalaVersion = "2.13.5"
+  def commonScalaVersion = "2.13.8"
 
   def scalaVersion = commonScalaVersion
 
